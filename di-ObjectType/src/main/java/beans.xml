@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+ 
+ <bean id ="mathCheatObjectValue" class="com.bl.di.MathCheat" ></bean>
+ 
+ <bean id="stu" class = "com.bl.di.Student">
+  <property name="id" value="100"></property>
+  <property name="mathCheat" ref="mathCheatObjectValue"/>
+   
+  
+  </bean>
+  
+  <bean id = "anotherStudent" class="com.bl.di.AnotherStudent">
+  <property name = "cheat" ref="mathCheatObjectValue"/>
+ 
+  </bean>
+  
+  
+  
+   </beans>
+        
